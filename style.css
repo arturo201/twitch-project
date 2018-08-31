@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+$color1: #a0a2af;
+$color2: #fff;
+$background: (to left, $color1, $color2);
+$main-menu: #fff;
+$online: #b8cca6;
+$offline: #f4abab;
+$white: #f2f2f2;
+$box-shadow: #7c7979;
+$twitch: #6441a4;
+$inactive: #433f4a;
+
+html {
+  background-color: $background;
+  box-sizing: border-box;
+  color: $white;
+  font-family: "Raleway", "New Times Roman";
+  font-size: 16px;
+}
+
+html,
+body {
+  background: -webkit-linear-gradient($background);
+  background: linear-gradient($background);
+}
+
+// Container
+.container {
+  box-shadow: 2px 5px 5px $box-shadow;
+  height: auto;
+  margin: 3% auto;
+  padding: 0;
+  width: 300px;
+}
+
+.main-menu {
+  background-color: $main-menu;
+  padding: 2% 0 0;
+}
+
+// Header
+.title {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.twitch-logo {
+  display: block;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+  width: auto;
+  padding: 17px;
+}
+
+// Filters (Buttons)
+.selector {
+  display: inline-flex;
+  height: inherit;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.square {
+  background-color: $inactive;
+  border: 1px solid $main-menu;
+  border-bottom: 0;
+  border-radius: 2px;
+  color: $white;
+  display: inline-block;
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+
+  &:first-child {
+    border-left: 0;
+  }
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: transform .25s ease-in-out;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+    font-family: Roboto;
+  }
+}
+
+.active {
+  background-color: $twitch;
+}
+
+// Twitch Users
+.channel {
+  padding: 2% 0;
+  margin: 0;
+  border-bottom: 1px solid $white;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.online {
+  background-color: $online;
+}
+
+.offline {
+  background-color: $offline;
+}
+
+.logo {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  border-color: $white;
+  margin-right: 20px;
+}
+
+.name {
+  font-size: 12px;
+}
+
+.game {
+  font-size: 9px;
+}
+
+@media (max-width: 768px) {
+  #name, #streaming {
+    text-align: center;
+  }
+
+  #name {
+    padding-top: 10px;
+  }
+}
